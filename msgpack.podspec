@@ -26,9 +26,9 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # Preserve the layout of headers in the msgpack-c directory
-  s.header_mappings_dir = 'msgpack-c'
+  s.header_mappings_dir = 'msgpack-c/include'
 
-  s.source_files = 'msgpack-c/include/*.{c,h}', 'msgpack-c/include/msgpack/*.{c,h}', 'msgpack-c/src/*.{c,h}'
+  s.source_files = 'msgpack-c/include/*h', 'msgpack-c/include/msgpack/*h', 'msgpack-c/src/*.c'
   s.public_header_files = 'msgpack-c/include/*.h', 'msgpack-c/include/msgpack/*.h'
 
   s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"${PODS_ROOT}"'}
